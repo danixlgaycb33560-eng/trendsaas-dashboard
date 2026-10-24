@@ -1,2 +1,3 @@
-# trendsaas-dashboard
-Dashboard des clippeurs TrendSaaS
+# Dashboard TrendSaaS
+
+Espace des clippeurs TrendSaaS (mis à jour automatiquement).
