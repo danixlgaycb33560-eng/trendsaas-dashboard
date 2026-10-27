@@ -401,7 +401,7 @@ function renderMe(){
   const N = DATA.N; const done = wk.done.length;
   const st = p.regStatus;
   const todayPending = wk.today && p.dayOk[wk.days.indexOf(wk.today)]===null;
-  const stTxt = st==="cours" && todayPending ? `🔥 Bonus régularité en cours : tout est bon jusqu'ici. ⏳ Aujourd'hui pas encore validé : poste au moins 2 vidéos sur 2 comptes TikTok différents.` : st==="oui" ? "✅ Bonus régularité validé : +20 €" : st==="cours" ? `🔥 Bonus régularité en cours : tous les jours sont bons pour l'instant (${done}/7). Continue jusqu'à dimanche !` : "❌ Bonus régularité perdu cette semaine : un jour a été raté. Ça repart lundi.";
+  const stTxt = st==="cours" && todayPending ? `🔥 Bonus régularité en cours : tout est bon jusqu'ici. ⏳ Aujourd'hui pas encore validé : poste au moins 4 vidéos TikTok aujourd'hui (tous tes comptes confondus).` : st==="oui" ? "✅ Bonus régularité validé : +20 €" : st==="cours" ? `🔥 Bonus régularité en cours : tous les jours sont bons pour l'instant (${done}/7). Continue jusqu'à dimanche !` : "❌ Bonus régularité perdu cette semaine : un jour a été raté. Ça repart lundi.";
   const L = ["L","M","M","J","V","S","D"];
   const daysHTML = wk.days.map((k,i) => { const ok = p.dayOk[i]; const n = p.daysPosted[i];
     const now = k===wk.today && ok===null; const cls = now ? "now" : ok===null ? "" : ok ? "ok" : "ko"; const m = now ? "⏳" : ok===null ? "·" : ok ? "✅" : "❌";
