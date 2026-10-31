@@ -261,7 +261,7 @@ function renderTop(){
     ? `<div class="topvid">${ON_GH ? `<video src="${esc(v.src)}" poster="${esc(v.src.replace(/\.mp4$/,".jpg"))}" controls playsinline preload="none"></video>` : `<a class="btn" style="text-align:center;text-decoration:none" href="https://trendsaas-fr.github.io/dashboard/" target="_blank" rel="noopener">▶ Voir la vidéo (version site)</a>`}<div class="tvc"><span class="medal">${["🥇","🥈","🥉"][i]||`<b>${i+1}</b>`}</span><b>${fmt(v.v)} vues</b>${v.d?`<span class="muted" style="font-size:14px">· postée ${ago(v.d)}</span>`:""}</div></div>`
     : `<div class="topv"><span class="medal">${["🥇","🥈","🥉"][i]||`<b style="font:900 18px var(--display)">${i+1}</b>`}</span><span class="tv"><b>${fmt(v.v)} vues</b>${v.d?`<span class="muted">postée le ${dShort(v.d)}</span>`:""}</span></div>`).join("");
 }
-function nextUpd(){ const g=String(DATA.generatedAt||""), hm=g.slice(11,16); const S=["09:15","12:15","15:15","18:15","21:15"]; const n=S.find(s=>s>hm); return n ? n.replace(":","h") : "00h15"; }
+function nextUpd(){ const g=String(DATA.generatedAt||""), hm=g.slice(11,16); const S=["09:05","12:05","15:05","18:05","21:05"]; const n=S.find(s=>s>hm); return n ? n.replace(":","h") : "00h05"; }
 function lastUpd(){ const g=String(DATA.generatedAt||""); return g.slice(8,10)+"/"+g.slice(5,7)+" à "+g.slice(11,16).replace(":","h"); }
 if (DATA.generatedAt) $("upd").textContent = `Dernière actualisation : ${lastUpd()} · prochaine vers ${nextUpd()} (toutes les 3 h)`;
 
